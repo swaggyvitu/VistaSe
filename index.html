@@ -46,7 +46,25 @@
             left: -15px;
             top: 50%;
             transform: translateY(-50%);
-        }        
+        }    
+        
+        .h-55{
+            height: 55% !important;
+        }
+        
+        .btn2:not(.nav-btns button){
+            background-color: #212529;
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 25px;
+            border: 1px solid rgb(85, 85, 85);
+        }
+        .btn2:not(.nav-btns button):hover{
+            background-color: #3fd8f6;
+            color: #212529;
+            border-color: #212529;
+        }
 
     </style>
 </head>
@@ -63,11 +81,11 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class=" d-lg-flex mt-3 mt-xl-0 container-fluid justify-content-center">
-                        <form class="d-flex w-75 mx-auto" role="search">
+                        <form class="d-flex w-75 mx-auto" role="search" action="pesquisa.html">
                             <input class="form-control me-2" type="search" placeholder="busque aqui seu produto"
                                 aria-label="Search" />
                             <button class="btn btn-info" type="submit">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff"
                                     class="bi bi-search" viewBox="0 0 16 16">
                                     <path
                                         d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
@@ -82,7 +100,7 @@
                                 <a class="nav-link btn" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn" href="#">Produtos</a>
+                                <a class="nav-link btn" href="#produtos0">Produtos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link btn text-nowrap" href="#">Cadastre-se</a>
@@ -91,18 +109,21 @@
                                 <a class="nav-link btn btn-outline-info" href="#">Entrar</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link btn text-info mx-2" href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                                
+                                <a class="nav-link btn text-info mx-2" href="carrinho.html"><svg xmlns="http://www.w3.org/2000/svg"
                                         width="25" height="25" fill="currentColor" class="bi bi-cart"
                                         viewBox="0 0 16 16">
                                         <path
                                             d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                                     </svg></a>
+                                    
                             </li>
                         </ul>
                     </div>
                 </div>
         </section>
-        <section>
+
+        <!-- <section>
             <div class="container-fluid p-0">
                 <div class="w-100 bg-info txc2 fs-4 ">
                     <ul class="navbar list-unstyled  d-flex w-100 justify-content-evenly">
@@ -113,17 +134,19 @@
                             <a class="nav-link" href="#">Calças</a>
                         </li>
                         <li class="nav-item mx-2">
-                            <a class="nav-link" href="#">Sapatos</a>
+                            <a class="nav-link" href="#">Calçados</a>
                         </li>
                     </ul>
                 </div>
             </div>
-    </section>
+    </section> -->
+
+        
     </header>
 
     <main>
         
-        <section class="container-fluid w-75 teste">
+        <section class="container-fluid w-75 mt-4 teste">
 
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner rounded-4 border border-top-0">
@@ -150,19 +173,128 @@
             </div>
         </section>
 
+    
+
         <section id="collection" class="py-5">
-            <div class="container">
-                <div class="title text-center">
+            <div class="container" >
+                <div class="title text-center" >
                     <h2 class="position-relative d-inline-block">Peças</h2>
                 </div>
             </div>
         </section>
 
+        <section class="">
+            <div class="row">
+                <div class="d-flex flex-wrap justify-content-center mt-2 mb-5 ">
+                    <button type ="button" class="btn2 m-2 bx-sh">Tudo</button>
+                    <button type ="button" class="btn2 m-2 bx-sh">Roupas</button>
+                    <button type ="button" class="btn2 m-2 bx-sh">Calças</button>
+                    <button type ="button" class="btn2 m-2 bx-sh">Calçados</button>
+                </div>
+            </div>
+        </section>
         
+    
+        <section class="container row row-cols-4 d-flex flex-row mt-4 w-75 mx-auto justify-content-center gap-5" id="produtos0">
+            <div class="card p-0 m-0 border bx-sh" style="width: 18rem;">
+                <div class=" container-fluid  p-2 bg-dark text-center text-info fs-6">Conjunto 1</div>
+                <img src="img/modeloroupa1.jpg" class="card-img-bottom " alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="produto1.html" class="btn2 btn-primary d-flex justify-content-center">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card p-0 m-0 border bx-sh" style="width: 18rem;">
+                <div class=" container-fluid  p-2 bg-dark text-center text-info fs-6">Sandália Marrom</div>
+                <img src="img/sandaliamarrom.jpg" class="card-img-bottom" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn2 btn-primary d-flex justify-content-center">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card p-0 m-0 border bx-sh" style="width: 18rem;">
+                <div class=" container-fluid  p-2 bg-dark text-center text-info fs-6">Calça Leggin</div>
+                <img src="img/calça1.jpg" class="card-img-bottom h-55" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn2 btn-primary d-flex justify-content-center">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card p-0 m-0 border bx-sh" style="width: 18rem;">
+                <div class=" container-fluid  p-2 bg-dark text-center text-info fs-6">Conjunto 2</div>
+                <img src="img/modeloroupa2.jpg" class="card-img-bottom" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn2 btn-primary d-flex justify-content-center">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card p-0 m-0 border bx-sh" style="width: 18rem;">
+                <div class=" container-fluid  p-2 bg-dark text-center text-info fs-6 w-100">Sapato Preto</div>
+                <img src="img/tenis1.jpg" class="card-img-bottom  mt-5 h-65" alt="...">
+                <div class="card-body mt-4">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn2 btn-primary d-flex justify-content-center">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card p-0 m-0 border bx-sh" style="width: 18rem;">
+                <div class=" container-fluid  p-2 bg-dark text-center text-info fs-6">Conjunto com vestido</div>
+                <img src="img/modeloroupa5.jpg" class="card-img-bottom h-55" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn2 btn-primary d-flex justify-content-center">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card p-0 m-0 border bx-sh" style="width: 18rem;">
+                <div class=" container-fluid  p-2 bg-dark text-center text-info fs-6">Conjunto 3</div>
+                <img src="img/modeloroupa3.jpg" class="card-img-bottom" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn2 btn-primary d-flex justify-content-center">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card p-0 m-0 border bx-sh" style="width: 18rem;">
+                <div class=" container-fluid  p-2 bg-dark text-center text-info fs-6">Calça de alfaiataria</div>
+                <img src="img/calça2.jpg" class="card-img-bottom h-55" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn2 btn-primary d-flex justify-content-center">Go somewhere</a>
+                </div>
+            </div>
+    
+            <div class="card p-0 m-0 border bx-sh" style="width: 18rem;">
+                <div class=" container-fluid  p-2 bg-dark text-center text-info fs-6">Coturno marrom</div>
+                <img src="img/coturno1.jpg" class="card-img-bottom mt-5 h-65" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title mt-4">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn2 btn-primary d-flex justify-content-center">Go somewhere</a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
+
+
     <footer>
-        <div class="container-fluid mt-5 text-center fixed-bottom bx-sh">
+        <div class="container-fluid mt-5 text-center  bx-sh">
             <div class="row ">
                 <div class="col-12 bg-light p-4 fs-4">Vista<span class="text-info">Se</span></div>
             </div>
